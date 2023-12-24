@@ -65,7 +65,7 @@ mod NameRegistry {
         self.favorite_numbers.write(owner.address, 0)
     }
 
-    #[external(v0)] // when cairo 2.4.0, update to abi
+    #[abi(embed_v0)] // when cairo 2.4.0, update to abi
     impl NameRegistry of super::INameRegistry<ContractState> {
         fn store_name(ref self: ContractState, name: felt252, registration_type: RegistrationType) {
             let caller = get_caller_address();
