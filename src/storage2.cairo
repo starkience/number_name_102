@@ -23,7 +23,7 @@ mod NameRegistry {
     #[storage]
     struct Storage {
         names: LegacyMap::<ContractAddress, felt252>,
-        total_names: u128, // keep track of the total number of name registrations stored in the contract
+        total_names: felt252, // keep track of the total number of name registrations stored in the contract
         owner: Person,
         favorite_numbers: LegacyMap<ContractAddress, felt252>
     }
